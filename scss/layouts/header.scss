@@ -44,9 +44,16 @@ header {
   transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
 }
 
-.menu-ul a:hover {
+.menu-ul a:focus,
+.menu-ul a:active {
   color: $white-color;
   background-color: $hover-menu-background-color;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(80, 74, 74, 0.5);
   border-radius: 50rem;
+}
+
+a:hover {
+  color: $hover-menu-background-color;
+  background-color:  #eeeeee;
+  box-sizing: border-box;
 }
