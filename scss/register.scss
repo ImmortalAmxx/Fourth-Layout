@@ -1,0 +1,42 @@
+main {
+	background-color: $light-gray-color;
+	width: 100%;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container-reg {
+	background-color: $light-gray-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 15px;
+}
+
+.reg-left-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 550px;
+}
+
+.reg-left-content h4 {
+	font-size: 28px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.reg-left-content p {
+	text-align: center;
+	width: 500px;
+	padding-top: 30px;
+	font-weight: 100;
+}
+
+.about-oxit {
+	font-size: 14px;
+	color: $nav-menu-color;
+	line-height: 1.6;
+}

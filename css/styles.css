@@ -136,6 +136,50 @@ header {
   transform: rotate(45deg) translate(0, 50%);
 }
 
+main {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container-reg {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+.reg-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 550px;
+}
+
+.reg-left-content h4 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.reg-left-content p {
+  text-align: center;
+  width: 500px;
+  padding-top: 30px;
+  font-weight: 100;
+}
+
+.about-oxit {
+  font-size: 14px;
+  color: #747987;
+  line-height: 1.6;
+}
+
+/* Start adaptive */
 @media screen and (max-width: 1300px) {
   /* Header */
   header {
