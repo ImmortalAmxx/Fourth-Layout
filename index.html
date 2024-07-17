@@ -36,6 +36,7 @@
           </div>
         </div>
       </header>
+
       <main>
         <div class="container-reg">
           <div class="reg-left-content">
@@ -50,6 +51,66 @@
               IT спеціалістом. Чекаємо вас на наших курсах з програмування в
               Луцьку. Старт наступного курсу 3 серпня.
             </p>
+          </div>
+
+          <div class="reg-right-content">
+            <form class="registration">
+              <h3>Зареєструватися на курси</h3>
+              <label for="name">Ім'я <b>*</b></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ім'я"
+                required
+              />
+
+              <label for="surname">Прізвище <b>*</b></label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Прізвище"
+                required
+              />
+
+              <label for="interest">Мене більше цікавить <b>*</b></label>
+              <input
+                type="text"
+                id="interest"
+                name="interest"
+                placeholder="developer or QA"
+                required
+              />
+
+              <label for="phone">Номер телефону <b>*</b></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Номер телефону: +38 XXX XX XX XXX"
+                required
+              />
+
+              <label for="email">Email <b>*</b></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+
+              <div class="checkbox">
+                <input type="checkbox" id="policy" name="policy" required />
+                <label for="policy"
+                  >Я погоджуюся з <a href="#">Політикою Конфіденційності</a>
+                  <b>*</b></label
+                >
+              </div>
+
+              <button type="submit">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
+            </form>
           </div>
         </div>
       </main>
