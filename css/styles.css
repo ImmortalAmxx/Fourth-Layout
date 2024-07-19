@@ -325,8 +325,13 @@ main {
   margin-bottom: 30px;
 }
 
+.slick-dots li button:before {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
 /* Start adaptive */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1250px) {
   /* Header */
   header {
     z-index: 3;
@@ -348,8 +353,16 @@ main {
   .reg-right-content {
     margin: 35px 0;
   }
+  /* Development block */
+  .development-content {
+    width: 925px;
+  }
+  .development-content-item h2 {
+    font-weight: 500;
+    text-align: center;
+  }
 }
-@media screen and (max-width: 918px) {
+@media screen and (max-width: 1024px) {
   /* Header */
   .nav-menu {
     display: flex;
@@ -397,6 +410,38 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  /* Development block */
+  .development {
+    padding: 50px 0px;
+  }
+  .development h2 {
+    font-size: 26px;
+  }
+  .development-content {
+    width: 800px;
+  }
+  .development-content-item h2 {
+    text-align: center;
+    font-weight: 500;
+  }
+  .development-content-item hr {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    width: 260px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .development h2 {
+    margin-bottom: 40px;
+  }
+  .development-content {
+    width: 600px;
+  }
+  .development-content-item {
+    height: auto;
+    margin: 0 10px;
+    display: flex !important;
   }
 }
 @media screen and (max-width: 750px) {
