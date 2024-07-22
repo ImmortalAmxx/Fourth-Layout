@@ -97,16 +97,20 @@
   .development {
     padding: 50px 0px;
   }
+
   .development h2 {
     font-size: 26px;
   }
+
   .development-content {
     width: 800px;
   }
+
   .development-content-item h2 {
     text-align: center;
     font-weight: 500;
   }
+
   .development-content-item hr {
     margin-top: 15px;
     margin-bottom: 25px;
@@ -114,13 +118,16 @@
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 860px) {
+  /* Development */
   .development h2 {
     margin-bottom: 40px;
   }
+
   .development-content {
     width: 600px;
   }
+
   .development-content-item {
     height: auto;
     margin: 0 10px;
@@ -177,9 +184,19 @@
   .registration input {
     width: 400px;
   }
+
+  /* Statistic content */
+  .statistic-content {
+    flex-wrap: wrap;
+  }
+  .statistic-content-item {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 590px) {
+
   /* Header */
   header {
     height: 70px;

@@ -59,7 +59,7 @@ header {
 .menu-link {
   padding: 10px 20px;
   text-decoration: none;
-  color: #747987;
+  color: hsl(224, 8%, 49%);
   transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
 }
 
@@ -173,7 +173,7 @@ main {
 
 .about-oxit {
   font-size: 14px;
-  color: #747987;
+  color: hsl(224, 8%, 49%);
   line-height: 1.6;
 }
 
@@ -294,6 +294,10 @@ main {
   font-weight: 400;
 }
 
+.development-content h2 {
+  color: #7f7f7f;
+}
+
 .development-content {
   display: flex;
   justify-content: center;
@@ -328,6 +332,50 @@ main {
 .slick-dots li button:before {
   font-size: 12px;
   margin-top: 10px;
+}
+
+/* Statistic content */
+.statistic {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  padding: 30px 50px;
+  flex-direction: column;
+}
+
+.container-statisitc {
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistic-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.statistic-content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin: 30px 40px;
+}
+
+.statistic-content-item p {
+  text-align: center;
+  font-weight: 200;
+  color: #ffffff;
+}
+
+.statistic h2 {
+  font-weight: 400;
+  color: #ffffff;
+  margin: 10px;
 }
 
 /* Start adaptive */
@@ -431,7 +479,8 @@ main {
     width: 260px;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 860px) {
+  /* Development */
   .development h2 {
     margin-bottom: 40px;
   }
@@ -483,6 +532,14 @@ main {
   }
   .registration input {
     width: 400px;
+  }
+  /* Statistic content */
+  .statistic-content {
+    flex-wrap: wrap;
+  }
+  .statistic-content-item {
+    flex: 1 1 45%;
+    margin: 10px;
   }
 }
 @media screen and (max-width: 590px) {

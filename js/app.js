@@ -3,7 +3,6 @@ $(".toggle-menu").on("click", function () {
     $(".nav-dropdown").toggleClass("open");
 });
 
-
 $(document).ready(function () {
     var screenWidth = $(window).width();
     var $siteDevContent = $(".development-content");
@@ -14,7 +13,7 @@ $(document).ready(function () {
   
       if (screenWidth < 600) {
         slidesToShow = 1;
-      } else if (screenWidth < 850) {
+      } else if (screenWidth < 860) {
         slidesToShow = 2;
       } else if (itemCount > 3) {
         slidesToShow = 3;
@@ -34,16 +33,14 @@ $(document).ready(function () {
       $(".development-content").slick("unslick");
     }
   
-    // Initial setup
-    if (screenWidth < 850 || itemCount > 3) {
+    if (screenWidth < 860 || itemCount > 3) {
       initializeSlider();
     }
-  
-    // Update on window resize
+
     $(window).resize(function () {
       screenWidth = $(window).width();
   
-      if (screenWidth < 850 || itemCount > 3) {
+      if (screenWidth < 860 || itemCount > 3) {
         if (
           $(".development-content").hasClass(
             "slick-initialized"

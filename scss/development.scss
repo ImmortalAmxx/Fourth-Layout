@@ -17,6 +17,10 @@
   font-weight: 400;
 }
 
+.development-content h2 {
+  color: $gray-color;
+}
+
 .development-content {
   display: flex;
   justify-content: center;
@@ -38,7 +42,7 @@
 .development-content-item p {
   text-align: center;
   font-weight: 200;
-  color: #7f7f7f;
+  color: $gray-color;
 }
 
 .development-content-item hr {
