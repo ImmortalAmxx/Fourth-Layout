@@ -225,6 +225,35 @@
   .reg-left-content p {
     width: auto;
   }
+
+  /* Development block */
+  .development h1 {
+    font-size: 22px;
+  }
+
+  .development-content{
+    width: 400px;
+  }
+
+  .development-content-item {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .development-content-item hr {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* Development block */
+  .development-content {
+    width: 320px;
+  }
+
+  .development-content-item hr {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 340px) {
