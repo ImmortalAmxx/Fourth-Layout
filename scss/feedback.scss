@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .feedback-slider {
@@ -36,6 +37,10 @@
 .feedback-content-item span {
   color: #7f7f7f;
   font-style: italic;
+}
+
+.container-feedback .slick-dots li button:before {
+  margin-top: 0;
 }
 
 .fa-quote-left {
