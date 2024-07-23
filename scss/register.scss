@@ -1,12 +1,12 @@
 /* Register */
 
 main {
-	background-color: $light-gray-color;
+	background-color: #f7f7f7;
 	width: 100%;
 }
 
 .container-reg {
-	background-color: $light-gray-color;
+	background-color: #f7f7f7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -35,7 +35,7 @@ main {
 
 .about-oxit {
 	font-size: 14px;
-	color: $nav-menu-color;
+	color: hsl(224, 8%, 49%);;
 	line-height: 1.6;
 }
 
@@ -84,6 +84,10 @@ main {
 
 .registration .field-container {
   margin-top: 10px;
+}
+
+#policy {
+  width: fit-content;
 }
 
 .checkbox {

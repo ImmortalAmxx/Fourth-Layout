@@ -116,6 +116,11 @@
     margin-bottom: 25px;
     width: 260px;
   }
+
+  /* Video content */
+  .video-content-video {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -132,6 +137,11 @@
     height: auto;
     margin: 0 10px;
     display: flex !important;
+  }
+
+  .statistic {
+    width: 750px;
+    padding: 0;
   }
 }
 
@@ -168,7 +178,6 @@
   .registration {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .registration h3 {
@@ -186,9 +195,12 @@
   }
 
   /* Statistic content */
+
   .statistic-content {
     flex-wrap: wrap;
+
   }
+
   .statistic-content-item {
     flex: 1 1 45%;
     margin: 10px;
@@ -196,7 +208,6 @@
 }
 
 @media screen and (max-width: 590px) {
-
   /* Header */
   header {
     height: 70px;
@@ -242,6 +253,16 @@
 
   .development-content-item hr {
     width: 350px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .registration {
+    align-items: center;
+  }
+  
+  .registration input {
+    width: 300px;
   }
 }
 
