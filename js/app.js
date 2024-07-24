@@ -53,12 +53,26 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  $(".feedback-slider").slick({
-    dots: true,
-    infinite: true,
-    speed: 1,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-  });
+$(".feedback-slider").slick({
+  slidesToShow: 1,
+  arrows: false,
+  dots: true,
+  slidesToScroll: 1,
+  infinite: true,
+  initialSlide: 0,
+  autoplay: true,
+  autoplaySpeed: 10000,
+  fade: true,
+  cssEase: "linear",
+});
+
+$(".mentors-content").slick({
+  slidesToShow: 1,
+  arrows: false,
+  dots: true,
+  slidesToScroll: 1,
+  infinite: true,
+  initialSlide: 0,
+  autoplay: true,
+  autoplaySpeed: 10000
 });
