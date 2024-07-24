@@ -351,7 +351,7 @@ main {
   flex-direction: column;
 }
 
-.container-statisitc {
+.container-statistic {
   background-color: #3498db;
   display: flex;
   justify-content: center;
@@ -553,6 +553,77 @@ main {
   height: 400px;
 }
 
+/* Contact content */
+.contact {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  padding: 15px 50px;
+  flex-direction: column;
+}
+
+.container-contact {
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact-content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin: 30px 40px;
+}
+
+.contact-content-item p,
+.contact-content-item a {
+  text-align: center;
+  font-weight: 200;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-content-item h2 {
+  font-weight: 400;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.contact-content-item .fa-solid,
+.contact-content-item .fa-brands {
+  color: white;
+  padding-bottom: 20px;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 30px 0;
+}
+
+.container-footer p:first-child {
+  font-size: 14px;
+  padding-bottom: 15px;
+  color: #337ab7;
+}
+
+.container-footer a {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+
 /* Start adaptive */
 @media screen and (max-width: 1250px) {
   /* Header */
@@ -712,6 +783,11 @@ main {
     opacity: 15%;
     width: 100%;
   }
+  /* Contacts content */
+  .contact {
+    width: 750px;
+    padding: 0;
+  }
 }
 @media screen and (max-width: 750px) {
   /* Header */
@@ -760,6 +836,14 @@ main {
     flex: 1 1 45%;
     margin: 10px;
   }
+  /* Contact content */
+  .contact-content {
+    flex-wrap: wrap;
+  }
+  .contact-content-item {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
 }
 @media screen and (max-width: 590px) {
   /* Header */
@@ -799,6 +883,10 @@ main {
   .development-content-item hr {
     width: 350px;
   }
+  /* Footer */
+  .container-footer {
+    padding: 40px 0;
+  }
 }
 @media screen and (max-width: 550px) {
   /* Registration content */
@@ -816,6 +904,13 @@ main {
   }
   .development-content-item hr {
     width: 250px;
+  }
+  .container-footer {
+    padding: 30px 0;
+    font-size: 16px;
+  }
+  .container-footer p {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 340px) {

@@ -192,6 +192,12 @@
     opacity: 15%;
     width: 100%;
   }
+
+  /* Contacts content */
+  .contact {
+    width: 750px;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -254,10 +260,20 @@
     flex: 1 1 45%;
     margin: 10px;
   }
+
+  /* Contact content */
+  .contact-content {
+    flex-wrap: wrap;
+
+  }
+
+  .contact-content-item {
+    flex: 1 1 45%;
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 590px) {
-
   /* Header */
   header {
     height: 70px;
@@ -304,10 +320,14 @@
   .development-content-item hr {
     width: 350px;
   }
+
+  /* Footer */
+  .container-footer {
+    padding: 40px 0;
+  }
 }
 
 @media screen and (max-width: 550px) {
-
   /* Registration content */
   .registration {
     align-items: center;
@@ -319,7 +339,6 @@
 }
 
 @media screen and (max-width: 450px) {
-
   /* Development content */
   .development-content {
     width: 320px;
@@ -328,10 +347,18 @@
   .development-content-item hr {
     width: 250px;
   }
+
+  .container-footer {
+    padding: 30px 0;
+    font-size: 16px;
+  }
+
+  .container-footer p {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 340px) {
-
   /* Register content */
   .container-reg {
     padding-bottom: 30px;
