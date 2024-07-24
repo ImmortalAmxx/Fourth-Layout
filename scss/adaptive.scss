@@ -1,6 +1,7 @@
 /* Start adaptive */
 
 @media screen and (max-width: 1250px) {
+
   /* Header */
   header {
     z-index: 3;
@@ -36,9 +37,23 @@
     font-weight: 500;
     text-align: center;
   }
+
+  /* Mentors block */
+  .mentors {
+    width: 95%;
+  }
+
+  .mentors-content-text {
+    width: 95%;
+  }
+
+  .mentors-content-text p {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+
   /* Header */
   .nav-menu {
     display: flex;
@@ -117,6 +132,15 @@
     width: 260px;
   }
 
+  /* Mentors content */
+  .mentors {
+    width: 80%;
+  }
+
+  .mentors-content-text {
+    width: 80%;
+  }
+
   /* Video content */
   .video-content-video {
     width: auto;
@@ -124,6 +148,7 @@
 }
 
 @media screen and (max-width: 860px) {
+
   /* Development content */
   .development h2 {
     margin-bottom: 40px;
@@ -144,9 +169,33 @@
     width: 750px;
     padding: 0;
   }
+
+  /* Mentors content */
+  .mentors-content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mentors-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .mentors-content-text p {
+    text-align: center;
+  }
+
+  .mentors-content-text hr {
+    opacity: 15%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 750px) {
+
   /* Header */
   header {
     height: 90px;
@@ -208,6 +257,7 @@
 }
 
 @media screen and (max-width: 590px) {
+
   /* Header */
   header {
     height: 70px;
@@ -242,7 +292,7 @@
     font-size: 22px;
   }
 
-  .development-content{
+  .development-content {
     width: 400px;
   }
 
@@ -257,17 +307,19 @@
 }
 
 @media screen and (max-width: 550px) {
+
   /* Registration content */
   .registration {
     align-items: center;
   }
-  
+
   .registration input {
     width: 300px;
   }
 }
 
 @media screen and (max-width: 450px) {
+
   /* Development content */
   .development-content {
     width: 320px;
@@ -279,6 +331,7 @@
 }
 
 @media screen and (max-width: 340px) {
+
   /* Register content */
   .container-reg {
     padding-bottom: 30px;
