@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -25,16 +24,12 @@
           </a>
           <nav class="nav-dropdown">
             <ul class="menu-list">
-              <li><a class="menu-link" href="#">Головна</a></li>
-              <li>
-                <a class="menu-link" href="#development-id">Програма курсу</a>
-              </li>
-              <li>
-                <a class="menu-link" href="#feedback-id">Відгуки про курс</a>
-              </li>
+              <li><a class="menu-link" href="#reg_id">Головна</a></li>
+              <li><a class="menu-link" href="#development-id">Програма курсу</a></li>
+              <li><a class="menu-link" href="#feedback-id">Відгуки про курс</a></li>
               <li><a class="menu-link" href="#video-id">Відео</a></li>
               <li><a class="menu-link" href="#mentors-id">Ментори</a></li>
-              <li><a class="menu-link" href="#">Подати заявку</a></li>
+              <li><a class="menu-link" href="#reg_id">Подати заявку</a></li>
             </ul>
           </nav>
           <div class="toggle-menu">
@@ -63,20 +58,29 @@
         <div class="reg-right-content">
           <form class="registration">
             <h3>Зареєструватися на курси</h3>
-            <label for="name">Ім'я <b>*</b></label>
-            <input type="text" id="name" name="name" placeholder="Ім'я" required>
+            <div class="reg-field">
+              <label for="name">Ім'я <b>*</b></label>
+              <input type="text" id="name" name="name" placeholder="Ім'я" required>
+            </div>
+            <div class="reg-field">
+              <label for="surname">Прізвище <b>*</b></label>
+              <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
+            </div>
 
-            <label for="surname">Прізвище <b>*</b></label>
-            <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
+            <div class="reg-field">
+              <label for="interest">Мене більше цікавить <b>*</b></label>
+              <input type="text" id="interest" name="interest" placeholder="developer or QA" required>
+            </div>
 
-            <label for="interest">Мене більше цікавить <b>*</b></label>
-            <input type="text" id="interest" name="interest" placeholder="developer or QA" required>
+            <div class="reg-field">
+              <label for="phone">Номер телефону <b>*</b></label>
+              <input type="tel" id="phone" name="phone" placeholder="Номер телефону: +38 XXX XX XX XXX" required>
+            </div>
 
-            <label for="phone">Номер телефону <b>*</b></label>
-            <input type="tel" id="phone" name="phone" placeholder="Номер телефону: +38 XXX XX XX XXX" required>
-
-            <label for="email">Email <b>*</b></label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <div class="reg-field">
+              <label for="email">Email <b>*</b></label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
 
             <div class="checkbox">
               <input type="checkbox" id="policy" name="policy" required>

@@ -51,6 +51,52 @@ $(document).ready(function () {
       }
     }
   });
+  
+  // Initial click event for smooth scrolling and active link
+  $('.menu-link').on('click', function (e) {
+    var targetId = $(this).attr('href');
+    if (targetId.startsWith("#")) {
+      e.preventDefault();
+      $('.menu-link').removeClass("active");
+      $(this).addClass("active");
+      var targetOffset = $(targetId).offset().top - 100;
+      $('html, body').animate({ scrollTop: targetOffset }, 800, function () {
+        history.pushState(null, null, targetId);
+      });
+    }
+  });
+
+  // Function to check which section is currently in view
+  function checkActiveSection() {
+    var scrollPos = $(window).scrollTop();
+    $('.menu-link').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top - 110 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.menu-link').removeClass("active");
+        currLink.addClass("active");
+      }
+    });
+  }
+
+  // Check active section on scroll
+  $(window).on('scroll', checkActiveSection);
+  // Initial check when the page loads
+  checkActiveSection();
+
+  // /* Add button style for nav menu */
+  // $('.menu-link').on('click', function (e) {
+  //   var targetId = $(this).attr('href');
+  //   if (targetId.startsWith("#")) {
+  //     e.preventDefault();
+  //     $('.menu-link').removeClass("active");
+  //     $(this).addClass("active");
+  //     var targetOffset = $(targetId).offset().top - 100;
+  //     $('html, body').animate({ scrollTop: targetOffset }, 800, function () {
+  //       history.pushState(null, null, targetId);
+  //     });
+  //   }
+  // });
 });
 
 $(".feedback-slider").slick({
