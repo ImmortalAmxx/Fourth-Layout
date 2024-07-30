@@ -235,11 +235,12 @@ main {
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-top: 10px;
 }
 
 .checkbox input {
   width: fit-content;
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .checkbox label {

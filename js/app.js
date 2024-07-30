@@ -1,8 +1,3 @@
-$(".toggle-menu").on("click", function () {
-  $(this).toggleClass("active");
-  $(".nav-dropdown").toggleClass("open");
-});
-
 $(document).ready(function () {
   var screenWidth = $(window).width();
   var $siteDevContent = $(".development-content");
@@ -30,7 +25,9 @@ $(document).ready(function () {
   }
 
   function destroySlider() {
-    $(".development-content").slick("unslick");
+    if ($siteDevContent.hasClass("slick-initialized")) {
+      $siteDevContent.slick("unslick");
+    }
   }
 
   if (screenWidth < 860 || itemCount > 3) {
@@ -41,21 +38,17 @@ $(document).ready(function () {
     screenWidth = $(window).width();
 
     if (screenWidth < 860 || itemCount > 3) {
-      if ($(".development-content").hasClass("slick-initialized")) {
-        destroySlider();
-      }
+      destroySlider();
       initializeSlider();
     } else {
-      if ($(".development-content").hasClass("slick-initialized")) {
-        destroySlider();
-      }
+      destroySlider();
     }
   });
-  
+
   /* Initial click event for smooth scrolling and active link */
   $('.menu-link').on('click', function (e) {
     var targetId = $(this).attr('href');
-    if (targetId.startsWith("#")) {
+    if (targetId && targetId.startsWith("#") && targetId.length > 1) {
       e.preventDefault();
       $('.menu-link').removeClass("active");
       $(this).addClass("active");
@@ -101,28 +94,99 @@ $(document).ready(function () {
 
   /* Initial check when the page loads */
   checkActiveSection();
+  
+  // Валідація форми
+  $('#registrationForm').on('submit', function (e) {
+    e.preventDefault();
+    var valid = true;
+
+    // Валідація поля "Ім'я"
+    var name = $('#name').val().trim();
+    var namePattern = /^[a-zA-Zа-яА-ЯїЇєЄіІ]{2,}$/;
+    if (name === '') {
+      alert('Будь ласка, введіть ім\'я');
+      valid = false;
+    } else if (!namePattern.test(name)) {
+      alert('Ім\'я повинно містити тільки літери і мінімум 2 символи');
+      valid = false;
+    }
+
+    // Валідація поля "Прізвище"
+    var surname = $('#surname').val().trim();
+    var surnamePattern = /^[a-zA-Zа-яА-ЯїЇєЄіІ]{2,}$/;
+    if (surname === '') {
+      alert('Будь ласка, введіть прізвище');
+      valid = false;
+    } else if (!surnamePattern.test(surname)) {
+      alert('Прізвище повинно містити тільки літери і мінімум 2 символи');
+      valid = false;
+    }
+
+    // Валідація поля "Мене більше цікавить"
+    var interest = $('#interest').val().trim().toLowerCase();
+    if (interest === '') {
+      alert('Будь ласка, введіть ваш інтерес');
+      valid = false;
+    } else if (interest !== 'qa' && interest !== 'development') {
+      alert('Поле інтересу повинно містити або "qa", або "development"');
+      valid = false;
+    }
+
+    // Валідація поля "Номер телефону"
+    var phone = $('#phone').val().trim();
+    var phonePattern = /^\+38 \d{3} \d{2} \d{2} \d{3}$/;
+    if (!phonePattern.test(phone)) {
+      alert('Будь ласка, введіть коректний номер телефону у форматі: +38 XXX XX XX XXX');
+      valid = false;
+    }
+
+    // Валідація поля "Email"
+    var email = $('#email').val().trim();
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+      alert('Будь ласка, введіть коректний email');
+      valid = false;
+    }
+
+    // Валідація чекбокса "Політика конфіденційності"
+    var policy = $('#policy').is(':checked');
+    if (!policy) {
+      alert('Будь ласка, погодьтеся з політикою конфіденційності');
+      valid = false;
+    }
+
+    if (valid) {
+      // Якщо всі поля валідні, показати alert та відправити форму
+      alert('Форма успішно відправлена!');
+      this.submit();
+    }
+  });
 });
 
-$(".feedback-slider").slick({
-  slidesToShow: 1,
-  arrows: false,
-  dots: true,
-  slidesToScroll: 1,
-  infinite: true,
-  initialSlide: 0,
-  autoplay: true,
-  autoplaySpeed: 10000,
-  fade: true,
-  cssEase: "linear",
-});
+if ($(".feedback-slider").length) {
+  $(".feedback-slider").slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: true,
+    slidesToScroll: 1,
+    infinite: true,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    fade: true,
+    cssEase: "linear",
+  });
+}
 
-$(".mentors-content").slick({
-  slidesToShow: 1,
-  arrows: false,
-  dots: true,
-  slidesToScroll: 1,
-  infinite: true,
-  initialSlide: 0,
-  autoplay: true,
-  autoplaySpeed: 10000
-});
+if ($(".mentors-content").length) {
+  $(".mentors-content").slick({
+    slidesToShow: 1,
+    arrows: false,
+    dots: true,
+    slidesToScroll: 1,
+    infinite: true,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 10000
+  });
+}

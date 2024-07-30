@@ -16,7 +16,7 @@
 
 <body>
   <div class="container">
-    <header>
+    <header id="main-id">
       <div class="nav-content">
         <div class="nav-menu">
           <a href="#">
@@ -24,12 +24,12 @@
           </a>
           <nav class="nav-dropdown">
             <ul class="menu-list">
-              <li><a class="menu-link" href="#reg_id">Головна</a></li>
+              <li><a class="menu-link" href="#main-id">Головна</a></li>
               <li><a class="menu-link" href="#development-id">Програма курсу</a></li>
               <li><a class="menu-link" href="#feedback-id">Відгуки про курс</a></li>
               <li><a class="menu-link" href="#video-id">Відео</a></li>
               <li><a class="menu-link" href="#mentors-id">Ментори</a></li>
-              <li><a class="menu-link" href="#reg_id">Подати заявку</a></li>
+              <li><a class="menu-link" href="#reg_id" data-target="reg_id">Подати заявку</a></li>
             </ul>
           </nav>
           <div class="toggle-menu">
@@ -56,15 +56,15 @@
         </div>
 
         <div class="reg-right-content">
-          <form class="registration">
+          <form class="registration" id="registrationForm">
             <h3>Зареєструватися на курси</h3>
             <div class="reg-field">
               <label for="name">Ім'я <b>*</b></label>
-              <input type="text" id="name" name="name" placeholder="Ім'я" required>
+              <input type="text" id="name" name="name" placeholder="Ім'я" required">
             </div>
             <div class="reg-field">
               <label for="surname">Прізвище <b>*</b></label>
-              <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
+              <input type="text" id="surname" name="surname" placeholder="Прізвище" required">
             </div>
 
             <div class="reg-field">
