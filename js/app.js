@@ -52,7 +52,7 @@ $(document).ready(function () {
     }
   });
   
-  // Initial click event for smooth scrolling and active link
+  /* Initial click event for smooth scrolling and active link */
   $('.menu-link').on('click', function (e) {
     var targetId = $(this).attr('href');
     if (targetId.startsWith("#")) {
@@ -61,42 +61,46 @@ $(document).ready(function () {
       $(this).addClass("active");
       var targetOffset = $(targetId).offset().top - 100;
       $('html, body').animate({ scrollTop: targetOffset }, 800, function () {
-        history.pushState(null, null, targetId);
+        history.replaceState(null, null, targetId);
       });
     }
   });
 
-  // Function to check which section is currently in view
+  /* Function to check which section is currently in view */
   function checkActiveSection() {
-    var scrollPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var scrollTop = $(window).scrollTop();
+    var scrollBottom = scrollTop + windowHeight;
+
+    var newActiveLink = null;
+
     $('.menu-link').each(function () {
       var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
-      if (refElement.position().top - 110 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-        $('.menu-link').removeClass("active");
-        currLink.addClass("active");
+      var refElement = $(currLink.attr("href"))[0];
+      if (refElement) {
+        var rect = refElement.getBoundingClientRect();
+        var elementTop = rect.top + scrollTop;
+        var elementBottom = elementTop + refElement.offsetHeight;
+
+        if (elementTop >= scrollTop && elementBottom <= scrollBottom) {
+          newActiveLink = currLink;
+        }
       }
     });
+
+    if (newActiveLink) {
+      $('.menu-link').removeClass("active");
+      newActiveLink.addClass("active");
+      var newHref = newActiveLink.attr("href");
+      history.replaceState(null, null, newHref);
+    }
   }
 
-  // Check active section on scroll
+  /* Check active section on scroll */
   $(window).on('scroll', checkActiveSection);
-  // Initial check when the page loads
-  checkActiveSection();
 
-  // /* Add button style for nav menu */
-  // $('.menu-link').on('click', function (e) {
-  //   var targetId = $(this).attr('href');
-  //   if (targetId.startsWith("#")) {
-  //     e.preventDefault();
-  //     $('.menu-link').removeClass("active");
-  //     $(this).addClass("active");
-  //     var targetOffset = $(targetId).offset().top - 100;
-  //     $('html, body').animate({ scrollTop: targetOffset }, 800, function () {
-  //       history.pushState(null, null, targetId);
-  //     });
-  //   }
-  // });
+  /* Initial check when the page loads */
+  checkActiveSection();
 });
 
 $(".feedback-slider").slick({
