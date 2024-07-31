@@ -8,7 +8,7 @@
 }
 
 .container-contact {
-  background-color: #3498db;
+  background-color: $light-blue-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,13 +34,13 @@
 .contact-content-item a {
   text-align: center;
   font-weight: 200;
-  color: #ffffff;
+  color: $white-color;
   text-decoration: none;
 }
 
 .contact-content-item h2 {
   font-weight: 400;
-  color: #ffffff;
+  color: $white-color;
   margin: 10px;
 }
 

@@ -8,7 +8,7 @@
 }
 
 .container-statistic {
-  background-color: #3498db;
+  background-color: $light-blue-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,11 +33,11 @@
 .statistic-content-item p {
   text-align: center;
   font-weight: 200;
-  color: #ffffff;
+  color: $white-color;
 }
 
 .statistic h2 {
   font-weight: 400;
-  color: #ffffff;
+  color: $white-color;
   margin: 10px;
 }

@@ -439,14 +439,19 @@ main {
   position: relative;
   left: -51%;
   top: 20px;
-  color: gray;
+  color: #7f7f7f;
 }
 
 .fa-quote-right {
   position: relative;
   left: 51%;
   top: -47px;
-  color: gray;
+  color: #7f7f7f;
+}
+
+.fa-quote-left,
+.fa-quote-right {
+  color: rgb(187, 187, 187);
 }
 
 /* Video content */

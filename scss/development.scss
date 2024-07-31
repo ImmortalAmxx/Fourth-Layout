@@ -1,5 +1,5 @@
 .container-development {
-  background-color: #ffffff;
+  background-color: $white-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .development-content h2 {
-  color: #7f7f7f;
+  color: $gray-color;
 }
 
 .development-content {
@@ -42,7 +42,7 @@
 .development-content-item p {
   text-align: center;
   font-weight: 200;
-  color: #7f7f7f;
+  color: $gray-color;
 }
 
 .development-content-item hr {

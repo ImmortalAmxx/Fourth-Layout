@@ -2,6 +2,7 @@ $(document).ready(function () {
   var screenWidth = $(window).width();
   var $siteDevContent = $(".development-content");
   var itemCount = $siteDevContent.find(".development-content-item").length;
+  var linkClicked = false; // Змінна для контролю кліків на посилання
 
   function initializeSlider() {
     let slidesToShow = 1;
@@ -50,17 +51,23 @@ $(document).ready(function () {
     var targetId = $(this).attr('href');
     if (targetId && targetId.startsWith("#") && targetId.length > 1) {
       e.preventDefault();
+      linkClicked = true; // Встановити змінну в true при кліку
       $('.menu-link').removeClass("active");
       $(this).addClass("active");
       var targetOffset = $(targetId).offset().top - 100;
       $('html, body').animate({ scrollTop: targetOffset }, 800, function () {
         history.replaceState(null, null, targetId);
+        setTimeout(function () {
+          linkClicked = false; // Повернути змінну в false після завершення анімації
+        }, 1000);
       });
     }
   });
 
   /* Function to check which section is currently in view */
   function checkActiveSection() {
+    if (linkClicked) return; // Перевірка, чи було клікано на посилання
+
     var windowHeight = $(window).height();
     var scrollTop = $(window).scrollTop();
     var scrollBottom = scrollTop + windowHeight;
@@ -134,7 +141,7 @@ $(document).ready(function () {
 
     // Валідація поля "Номер телефону"
     var phone = $('#phone').val().trim();
-    var phonePattern = /^\+38 \d{3} \d{2} \d{2} \d{3}$/;
+    var phonePattern = /^\+38 \d{3} \d{2} \д{2} \д{3}$/;
     if (!phonePattern.test(phone)) {
       alert('Будь ласка, введіть коректний номер телефону у форматі: +38 XXX XX XX XXX');
       valid = false;

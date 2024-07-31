@@ -132,7 +132,7 @@ main {
 .registration button {
   align-self: center;
   margin-top: 20px;
-  color: #ffffff;
+  color: $white-color;
   background-color: #337ab7;
   height: 50px;
   width: 370px;
@@ -146,6 +146,6 @@ main {
 
 .registration form button:hover {
   color: #337ab7;
-  background-color: #ffffff;
+  background-color: $white-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
