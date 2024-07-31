@@ -50,6 +50,11 @@
   .mentors-content-text p {
     width: auto;
   }
+
+  /* Contact block */
+  .contact {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -192,12 +197,6 @@
     opacity: 15%;
     width: 100%;
   }
-
-  /* Contacts content */
-  .contact {
-    width: 750px;
-    padding: 0;
-  }
 }
 
 @media screen and (max-width: 750px) {
@@ -262,18 +261,32 @@
   }
 
   /* Contact content */
-  .contact-content {
+  .contact {
     flex-wrap: wrap;
-
+    width: 500px;
   }
 
   .contact-content-item {
-    flex: 1 1 45%;
-    margin: 10px;
+    width: 250px;
+  }
+
+  .contact-content-item a {
+    margin-top: 5px;
+  }
+
+  .contact-content-item:nth-child(1),
+  .contact-content-item:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .contact-content-item .fa-solid, 
+  .contact-content-item .fa-brands {
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 590px) {
+
   /* Header */
   header {
     height: 70px;
@@ -321,6 +334,20 @@
     width: 350px;
   }
 
+  /* Contact content */
+  .contact {
+    width: 400px;
+    padding: 50px 0;
+  }
+
+  .contact-content-item {
+    width: 200px;
+  }
+
+  .contact-content-item a {
+    font-size: 13px;
+  }
+
   /* Footer */
   .container-footer {
     padding: 40px 0;
@@ -328,6 +355,7 @@
 }
 
 @media screen and (max-width: 550px) {
+
   /* Registration content */
   .registration {
     align-items: center;
@@ -336,9 +364,14 @@
   .registration input {
     width: 300px;
   }
+
+  .registration button {
+    width: 340px;
+  }
 }
 
 @media screen and (max-width: 450px) {
+
   /* Development content */
   .development-content {
     width: 320px;
@@ -356,11 +389,54 @@
   .container-footer p {
     margin-bottom: 10px;
   }
+
+  /* Contact content */
+  .contact {
+    width: 320px;
+    padding: 50px 0;
+  }
+
+  .contact-content-item {
+    width: 160px;
+  }
+
+  .contact-content-item a {
+    margin-top: 5px;
+    font-size: 11px;
+  }
+
+  .contact-content-item .fa-solid,
+  .contact-content-item .fa-brands {
+    font-size: 1.8em;
+  } 
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 370px) {
+  .registration button {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
   /* Register content */
   .container-reg {
     padding-bottom: 30px;
+  }
+
+  .registration h3 {
+    font-size: 21px;
+  }
+
+  .registration button {
+    width: 300px;
+  }
+
+  .registration input {
+    width: 260px;
+  }
+
+  .checkbox {
+    margin-left: 10px;
   }
 }

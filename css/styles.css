@@ -9,7 +9,7 @@ body {
   height: 100%;
 }
 
-.container {
+.wrapper {
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -565,47 +565,35 @@ main {
 /* Contact content */
 .contact {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   width: 1200px;
-  padding: 15px 50px;
-  flex-direction: column;
+  padding: 50px 15px;
 }
 
 .container-contact {
   background-color: #3498db;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
 }
 
 .contact-content-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  margin: 30px 40px;
 }
 
-.contact-content-item p,
 .contact-content-item a {
-  text-align: center;
   font-weight: 200;
   color: #ffffff;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .contact-content-item h2 {
   font-weight: 400;
   color: #ffffff;
-  margin: 10px;
+  margin: 10px 0 0;
 }
 
 .contact-content-item .fa-solid,
@@ -673,6 +661,10 @@ main {
   }
   .mentors-content-text p {
     width: auto;
+  }
+  /* Contact block */
+  .contact {
+    width: 95%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -792,11 +784,6 @@ main {
     opacity: 15%;
     width: 100%;
   }
-  /* Contacts content */
-  .contact {
-    width: 750px;
-    padding: 0;
-  }
 }
 @media screen and (max-width: 750px) {
   /* Header */
@@ -846,12 +833,23 @@ main {
     margin: 10px;
   }
   /* Contact content */
-  .contact-content {
+  .contact {
     flex-wrap: wrap;
+    width: 500px;
   }
   .contact-content-item {
-    flex: 1 1 45%;
-    margin: 10px;
+    width: 250px;
+  }
+  .contact-content-item a {
+    margin-top: 5px;
+  }
+  .contact-content-item:nth-child(1),
+  .contact-content-item:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .contact-content-item .fa-solid,
+  .contact-content-item .fa-brands {
+    padding: 0;
   }
 }
 @media screen and (max-width: 590px) {
@@ -892,6 +890,17 @@ main {
   .development-content-item hr {
     width: 350px;
   }
+  /* Contact content */
+  .contact {
+    width: 400px;
+    padding: 50px 0;
+  }
+  .contact-content-item {
+    width: 200px;
+  }
+  .contact-content-item a {
+    font-size: 13px;
+  }
   /* Footer */
   .container-footer {
     padding: 40px 0;
@@ -904,6 +913,9 @@ main {
   }
   .registration input {
     width: 300px;
+  }
+  .registration button {
+    width: 340px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -921,11 +933,44 @@ main {
   .container-footer p {
     margin-bottom: 10px;
   }
+  /* Contact content */
+  .contact {
+    width: 320px;
+    padding: 50px 0;
+  }
+  .contact-content-item {
+    width: 160px;
+  }
+  .contact-content-item a {
+    margin-top: 5px;
+    font-size: 11px;
+  }
+  .contact-content-item .fa-solid,
+  .contact-content-item .fa-brands {
+    font-size: 1.8em;
+  }
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 370px) {
+  .registration button {
+    width: 330px;
+  }
+}
+@media screen and (max-width: 350px) {
   /* Register content */
   .container-reg {
     padding-bottom: 30px;
+  }
+  .registration h3 {
+    font-size: 21px;
+  }
+  .registration button {
+    width: 300px;
+  }
+  .registration input {
+    width: 260px;
+  }
+  .checkbox {
+    margin-left: 10px;
   }
 }
 

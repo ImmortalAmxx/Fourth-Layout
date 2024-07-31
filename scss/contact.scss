@@ -1,47 +1,35 @@
 /* Contact content */
 .contact {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   width: 1200px;
-  padding: 15px 50px;
-  flex-direction: column;
+  padding: 50px 15px;
 }
 
 .container-contact {
   background-color: $light-blue-color;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
 }
 
 .contact-content-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  margin: 30px 40px;
 }
 
-.contact-content-item p, 
 .contact-content-item a {
-  text-align: center;
   font-weight: 200;
   color: $white-color;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .contact-content-item h2 {
   font-weight: 400;
   color: $white-color;
-  margin: 10px;
+  margin: 10px 0 0;
 }
 
 .contact-content-item .fa-solid, 

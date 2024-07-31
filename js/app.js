@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  $(".toggle-menu").on("click", function () {
+    $(this).toggleClass("active");
+    $(".nav-dropdown").toggleClass("open");
+  });
+
   var screenWidth = $(window).width();
   var $siteDevContent = $(".development-content");
   var itemCount = $siteDevContent.find(".development-content-item").length;
@@ -140,12 +145,10 @@ $(document).ready(function () {
     }
 
     /* Validation of the "Phone number" field */
-    var phone = $('#phone').val().replace(/\D/g, ''); // Видалити нечислові символи
-    if (phone === '') {
-      alert('Введіть номер телефону.');
-      valid = false;
-    } else if (!/^\d{12}$/.test(phone)) { // Перевірити, чи містить номер 12 цифр (з кодом країни)
-      alert('Введіть правильний номер телефону.');
+    var phone = $('#phone').val().trim();
+    var phonePattern = /^\+38 \d{3} \d{2} \d{2} \d{3}$/;
+    if (!phonePattern.test(phone)) {
+      alert('Будь ласка, введіть коректний номер телефону у форматі: +38 XXX XX XX XXX');
       valid = false;
     }
 
