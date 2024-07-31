@@ -107,7 +107,7 @@ $(document).ready(function () {
     e.preventDefault();
     var valid = true;
 
-    // Валідація поля "Ім'я"
+    /* Validation of the "Name" field */
     var name = $('#name').val().trim();
     var namePattern = /^[a-zA-Zа-яА-ЯїЇєЄіІ]{2,}$/;
     if (name === '') {
@@ -118,7 +118,7 @@ $(document).ready(function () {
       valid = false;
     }
 
-    // Валідація поля "Прізвище"
+    /* Validation of the "Surname" field */
     var surname = $('#surname').val().trim();
     var surnamePattern = /^[a-zA-Zа-яА-ЯїЇєЄіІ]{2,}$/;
     if (surname === '') {
@@ -129,25 +129,27 @@ $(document).ready(function () {
       valid = false;
     }
 
-    // Валідація поля "Мене більше цікавить"
+    /* Validation of the "I'm more interested in" field */
     var interest = $('#interest').val().trim().toLowerCase();
     if (interest === '') {
       alert('Будь ласка, введіть ваш інтерес');
       valid = false;
-    } else if (interest !== 'qa' && interest !== 'development') {
-      alert('Поле інтересу повинно містити або "qa", або "development"');
+    } else if (interest !== 'qa' && interest !== 'developer') {
+      alert('Поле інтересу повинно містити або "qa", або "developer"');
       valid = false;
     }
 
-    // Валідація поля "Номер телефону"
-    var phone = $('#phone').val().trim();
-    var phonePattern = /^\+38 \d{3} \d{2} \д{2} \д{3}$/;
-    if (!phonePattern.test(phone)) {
-      alert('Будь ласка, введіть коректний номер телефону у форматі: +38 XXX XX XX XXX');
+    /* Validation of the "Phone number" field */
+    var phone = $('#phone').val().replace(/\D/g, ''); // Видалити нечислові символи
+    if (phone === '') {
+      alert('Введіть номер телефону.');
+      valid = false;
+    } else if (!/^\d{12}$/.test(phone)) { // Перевірити, чи містить номер 12 цифр (з кодом країни)
+      alert('Введіть правильний номер телефону.');
       valid = false;
     }
 
-    // Валідація поля "Email"
+    /* Validation of the "Email" field */
     var email = $('#email').val().trim();
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailPattern.test(email)) {
@@ -155,15 +157,7 @@ $(document).ready(function () {
       valid = false;
     }
 
-    // Валідація чекбокса "Політика конфіденційності"
-    var policy = $('#policy').is(':checked');
-    if (!policy) {
-      alert('Будь ласка, погодьтеся з політикою конфіденційності');
-      valid = false;
-    }
-
     if (valid) {
-      // Якщо всі поля валідні, показати alert та відправити форму
       alert('Форма успішно відправлена!');
       this.submit();
     }
