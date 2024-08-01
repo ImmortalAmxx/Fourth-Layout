@@ -1,0 +1,41 @@
+@mixin flex($flex-direction: null, $align-items: null, $justify-content: null) {
+    display: flex;
+    
+    @if $flex-direction {
+        flex-direction: $flex-direction;
+    }
+
+    @if $align-items {
+        align-items: $align-items;
+    }
+
+    @if $justify-content {
+        justify-content: $justify-content;
+    }
+}
+
+@mixin text-style($font-size: null, $font-weight: null, $font-style: null, $text-align: null, $text-decoration: null, $color: null) {
+    @if $font-size {
+        font-size: $font-size;
+    }
+
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+
+    @if $font-style {
+        font-style: $font-style;
+    }
+
+    @if $text-align {
+        text-align: $text-align;
+    }
+
+    @if $text-decoration {
+        text-decoration: $text-decoration;
+    }
+
+    @if $color {
+        color: $color;
+    }
+}

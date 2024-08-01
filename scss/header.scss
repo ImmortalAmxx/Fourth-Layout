@@ -1,24 +1,19 @@
 /* Header */
-
 header {
   height: 100px;
   width: 100%;
   top: 0;
-  display: flex;
   position: sticky;
   background-color: $white-color;
   box-shadow: 0 0 10px;
   z-index: 1;
-  align-items: center;
-  flex-direction: column;
+  @include flex(column, center);
 }
 
 .nav-content {
   padding: 0 15px;
   width: 1250px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include flex($align-items: center, $justify-content: center);
 }
 
 .nav-logo {
@@ -28,16 +23,14 @@ header {
 }
 
 .nav-menu {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  @include flex($align-items: center, $justify-content: space-between);
 }
 
 .menu-list {
   list-style-type: none;
   display: flex;
-  font-size: 16px;
+  font-size: $font-size-normal;
 }
 
 .menu-link {
@@ -48,8 +41,8 @@ header {
 }
 
 .menu-link:hover {
-  color: #337ab7;
-  background-color: #f7f7f7;
+  color: $blue-color;
+  background-color: $light-gray-color;
   box-sizing: border-box;
 }
 
@@ -60,7 +53,7 @@ header {
   display: none;
   cursor: pointer;
   align-items: center;
-  background-color: #337ab7;
+  background-color: $blue-color;
   border-radius: 4px;
   position: relative;
   justify-content: start;
@@ -71,9 +64,7 @@ header {
   height: 2px;
   transform: scale(1);
   background-color: $white-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex(column, center);
 }
 
 .toggle-menu::before,
@@ -115,7 +106,7 @@ header {
 
 .menu-link.active {
   color: $white-color;
-  background-color: #337ab7;
+  background-color: $blue-color;
   box-shadow: 0 0 10px rgba(80, 74, 74, 0.5);
   border-radius: 50rem;
 }

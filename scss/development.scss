@@ -1,20 +1,16 @@
 .container-development {
   background-color: $white-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($justify-content: center, $align-items: center);
 }
 
 .development {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
   width: 1200px;
   padding: 50px 15px;
 }
 
 .development h2 {
-  font-weight: 400;
+  font-weight: $font-weight-normal;
 }
 
 .development-content h2 {
@@ -22,17 +18,13 @@
 }
 
 .development-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($justify-content: center, $align-items: center);
   width: 100%;
   max-width: 1200px;
 }
 
 .development-content-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
   width: 350px;
   height: 100%;
   margin: 20px;
@@ -40,13 +32,11 @@
 }
 
 .development-content-item p {
-  text-align: center;
-  font-weight: 200;
-  color: $gray-color;
+  @include text-style($font-weight: $font-weight-light, $text-align: center, $color: $gray-color);
 }
 
 .development-content-item hr {
-  border: 1px solid #337ab7;
+  border: 1px solid $blue-color;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;

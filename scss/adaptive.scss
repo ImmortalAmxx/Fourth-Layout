@@ -18,9 +18,7 @@
 
   /* Register container */
   .container-reg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex($flex-direction: column, $align-items: center);
   }
 
   /* Register form */
@@ -34,8 +32,7 @@
   }
 
   .development-content-item h2 {
-    font-weight: 500;
-    text-align: center;
+    @include text-style($font-weight: $font-weight-medium, $text-align: center);
   }
 
   /* Mentors block */
@@ -61,11 +58,9 @@
 
   /* Header */
   .nav-menu {
-    display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: start;
     margin: 0 20px;
+    @include flex($justify-content: space-between, $align-items: start);
   }
 
   .toggle-menu {
@@ -92,10 +87,7 @@
   }
 
   .menu-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(column, center, center);
     height: 250px;
     row-gap: 20px;
     margin: 10px 0 0 15px;
@@ -108,9 +100,7 @@
 
   /* Left content */
   .container-reg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex($flex-direction: column, $align-items: center);
   }
 
   /* Development content */
@@ -127,8 +117,7 @@
   }
 
   .development-content-item h2 {
-    text-align: center;
-    font-weight: 500;
+    @include text-style($font-weight: $font-weight-medium, $text-align: center);
   }
 
   .development-content-item hr {
@@ -166,7 +155,7 @@
   .development-content-item {
     height: auto;
     margin: 0 10px;
-    display: flex !important;
+    display: flex !important;    
   }
 
   /* Statistic content */
@@ -177,15 +166,11 @@
 
   /* Mentors content */
   .mentors-content-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex($flex-direction: column, $align-items: center);
   }
 
   .mentors-content-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex($flex-direction: column, $align-items: center);
     padding: 0;
   }
 
@@ -231,18 +216,16 @@
 
   /* Register form */
   .registration {
-    display: flex;
-    justify-content: center;
+    @include flex($justify-content: center);
   }
 
   .registration h3 {
     align-self: center;
-    font-size: 22px;
+    font-size: $font-size-medium;
   }
 
   .registration label {
-    text-align: left;
-    font-size: 14px;
+    @include text-style($font-size: $font-size-small, $text-align: left);
   }
 
   .registration input {
@@ -309,7 +292,7 @@
   }
 
   .creg-left-content h4 {
-    font-size: 22px;
+    font-size: $font-size-medium;
   }
 
   .reg-left-content p {
@@ -318,7 +301,7 @@
 
   /* Development content */
   .development h1 {
-    font-size: 22px;
+    font-size: $font-size-medium;
   }
 
   .development-content {
@@ -383,7 +366,7 @@
 
   .container-footer {
     padding: 30px 0;
-    font-size: 16px;
+    font-size: $font-size-normal;
   }
 
   .container-footer p {

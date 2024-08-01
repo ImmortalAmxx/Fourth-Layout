@@ -1,34 +1,26 @@
 /* Contact content */
 .contact {
-  display: flex;
-  justify-content: space-around;
+  @include flex($justify-content: space-around);
   width: 1200px;
   padding: 50px 15px;
 }
 
 .container-contact {
   background-color: $light-blue-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
 }
 
 .contact-content-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
 }
 
 .contact-content-item a {
-  font-weight: 200;
-  color: $white-color;
-  text-decoration: none;
   margin-top: 10px;
+  @include text-style($font-weight: $font-weight-light, $text-decoration: none, $color: $white-color);
 }
 
 .contact-content-item h2 {
-  font-weight: 400;
-  color: $white-color;
+  @include text-style($font-weight: $font-weight-normal, $color: $white-color);
   margin: 10px 0 0;
 }
 

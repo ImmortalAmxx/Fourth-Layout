@@ -1,15 +1,13 @@
 /* Register */
 
 main {
-	background-color: #f7f7f7;
+	background-color: $light-gray-color;
 	width: 100%;
 }
 
 .container-reg {
-	background-color: #f7f7f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	background-color: $light-gray-color;
+  @include flex($justify-content: center, $align-items: center);
 	padding: 40px 15px;
 }
 
@@ -18,48 +16,37 @@ main {
 }
 
 .reg-left-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
 	width: 550px;
 }
 
 .reg-left-content h4 {
-	font-size: 28px;
-	font-weight: 600;
-	text-align: center;
+  @include text-style($font-size: 28px, $font-weight: $font-weight-semibold, $text-align: center);
 }
 
 .reg-left-content p {
-	text-align: center;
 	width: 500px;
 	padding-top: 30px;
-	font-weight: 100;
+  @include text-style($font-weight: 100, $text-align: center);
 }
 
 .about-oxit {
-	font-size: 14px;
-	color: hsl(224, 8%, 49%);;
+	@include text-style($font-size: $font-size-small, $color: hsl(224, 8%, 49%));
 	line-height: 1.6;
 }
 
 /* Right content */
 .reg-right-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
 	margin-left: 60px;
 }
 
 .registration {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  @include flex($flex-direction: column, $align-items: start);
 }
 
 .registration h2 {
-  font-size: 1.3em;
-  font-weight: 600;
+  @include text-style($font-size: 1.3em, $font-weight: $font-weight-semibold);
 }
 
 .registration label {
@@ -82,7 +69,7 @@ main {
 
 .registration input:focus {
   outline: none;
-  border: 1px solid #337ab7;
+  border: 1px solid $blue-color;
   box-shadow: 0 0 5px rgba(51, 122, 183, 0.5);
 }
 
@@ -95,9 +82,7 @@ main {
 }
 
 .checkbox {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  @include flex($justify-content: start, $align-items: center);
   margin-top: 10px;
 }
 
@@ -112,7 +97,7 @@ main {
 
 .checkbox a {
   text-decoration: none;
-  color: #337ab7;
+  color: $blue-color;
 }
 
 .checkbox a:hover {
@@ -120,9 +105,8 @@ main {
 }
 
 .registration b {
-  font-weight: bold;
   cursor: pointer;
-  color: red;
+	@include text-style($font-weight: bold, $color: red);
 }
 
 .registration h3 {
@@ -132,20 +116,19 @@ main {
 .registration button {
   align-self: center;
   margin-top: 20px;
-  color: $white-color;
-  background-color: #337ab7;
+  background-color: $light-blue-color;
   height: 50px;
   width: 370px;
-  font-weight: 500;
   cursor: pointer;
   border-radius: 30px;
   border: none;
   transition: all 0.4s;
   padding: 10px 15px;
+	@include text-style($font-weight: $font-weight-medium, $color: $white-color);
 }
 
 .registration form button:hover {
-  color: #337ab7;
+  color: $blue-color;
   background-color: $white-color;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

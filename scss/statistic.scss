@@ -1,43 +1,32 @@
 /* Statistic content */
 .statistic {
-  display: flex;
-  align-items: center;
   width: 1200px;
   padding: 30px 50px;
-  flex-direction: column;
+  @include flex($flex-direction: column, $align-items: center);
 }
 
 .container-statistic {
   background-color: $light-blue-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($justify-content: center, $align-items: center);
 }
 
 .statistic-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex($justify-content: center, $align-items: center);
   width: 100%;
   max-width: 1200px;
 }
 
 .statistic-content-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($flex-direction: column, $align-items: center);
   height: 100%;
   margin: 30px 40px;
 }
 
 .statistic-content-item p {
-  text-align: center;
-  font-weight: 200;
-  color: $white-color;
+	@include text-style($font-weight: $font-weight-light, $text-align: center, $color: $white-color);
 }
 
 .statistic h2 {
-  font-weight: 400;
-  color: $white-color;
   margin: 10px;
+	@include text-style($font-weight: $font-weight-normal, $color: $white-color);
 }
